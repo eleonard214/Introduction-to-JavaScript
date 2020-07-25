@@ -7,29 +7,35 @@
 
 //Task b: declare a variable and then use a conditional to change the value of that variable based on the value assigned to a second variable (no function required)
 
+let variableA = 15
 
+let variableB = 19
 
 
 
 //Task c: Convert string ("1999") to integer (1999)  (no function required) // hint look up the Number method
 
-
-
+let string = "1999"
+console.log(Number(string))
 
 
 //Task d: Write a function to multiply a*b 
 
-
-
+function multiply(a, b){
+    return a * b
+}
+console.log(multiply(10, 30))
 
 
 /************************************************************** Task 2 **************************************************************/
 //Age in Dog years
 //write a function that takes your age and returns it to you in dog years - they say that 1 human year is equal to seven dog years 
-
-
-
-
+const myAge = 41;
+const dogYears = 7;
+function dogAge(myAge,dogYears) {
+   myAge * dogYears;
+}
+return dogAge;
 
 /************************************************************** Task 3 **************************************************************/
 //Dog feeder 
