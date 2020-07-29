@@ -1,17 +1,25 @@
 /************************************************************** Task 1: Warm-up! **************************************************************/
 //Task a: declare a variable called votingAge, console log true if age > 18 (no function required)
-
-
+const votingAge = 18;
+if (votingAge>18){
+  console.log(true)
+}
+else {
+  console.log(false)
+}
 
 
 
 //Task b: declare a variable and then use a conditional to change the value of that variable based on the value assigned to a second variable (no function required)
 
 let variableA = 15
-
 let variableB = 19
-
-
+if (variableB > 0){
+  console.log(variableA + variableB)
+}
+else {
+  console.log(variableA * variableB)
+}
 
 //Task c: Convert string ("1999") to integer (1999)  (no function required) // hint look up the Number method
 
@@ -30,12 +38,13 @@ console.log(multiply(10, 30))
 /************************************************************** Task 2 **************************************************************/
 //Age in Dog years
 //write a function that takes your age and returns it to you in dog years - they say that 1 human year is equal to seven dog years 
-const myAge = 41;
-const dogYears = 7;
-function dogAge(myAge,dogYears) {
-   myAge * dogYears;
+
+
+function dogAge(myAge) {
+let dogYears = 7*myAge;
+console.log(dogYears)
 }
-return dogAge;
+myAge(41);
 
 /************************************************************** Task 3 **************************************************************/
 //Dog feeder 
@@ -55,30 +64,90 @@ return dogAge;
 
 // when you are finished invoke your function with the weight of 15 lbs and the age of 1 year - if your calculations are correct your result should be 0.44999999999999996
   
-
+function feedDog(dogWeight, dogAge){
+  if(dogAge > 1) {
+    if (dogWeight <= 5){
+      return .05 * dogWeight
+    }
+    else if (dogWeight >= 6 && dogWeight <= 10){
+      return 0.04 * dogWeight
+    }
+    else if (dogWeight >= 11 && dogWeight <= 15){
+      return 0.03 * dogWeight
+    }
+    else if(dogWeight > 15){
+      return 0.02 * dogWeight
+    }
+  }
+  else{
+    if(dogAge >= .16 && dogAge <= .03){
+    return 0.1 * dogWeight
+  }
+    else if (dogAge >= .04 && dogAge <= .58){
+    return 0.05 * dogWeight
+  }
+    else if(dogAge >= .59 && dogAge <= .99){
+    return .04 * dogWeight
+  }
+  }
+}
+console.log (feedDog(15, 1));
 
 
 
 /************************************************************** Task 4 **************************************************************/
-// Rock, Paper, Sissors
-// Your function should take a string (either rock paper or sissors)
+// Rock, Paper, Scissors
+// Your function should take a string (either rock paper or scissors)
 // it should return you won or you lost based on the rules of the game (you may need to look up the rules if you have not played before)
 // use math.random to determine the computers choice 
 // hint while you can complete this with only conditionals based on strings it may help to equate choice to a number 
 
-  
+  function rockPaperScissors(player){
+    let computer = Math.floor(Math.random() *3);
+    if (computer === 0) {
+      choice = "rock"
+    }
+    else if (choice === 1) {
+      choice = "paper"
+    }
+    else if (choice === 2) {
+      choice = "scissors"
+    } 
+    if (player === rock) {
+      choice = 0
+    }
+    else if (choice === paper){
+      choice = 1
+    }
+    else if (choice === scissors){
+      choice = 2
+    }
+    if (computer === player){
+      console.log('Draw')
+    }
+    else if (computer === 0 && player === 3 ){
+      
+    }
+  }
   
 
 /************************************************************** Task 5 **************************************************************/
 //Metric Converter
 //a. KM to Miles - should take the number of kilometers and convert it to the equal number of miles
-
+// k*converter=miles
+const kilometers
+function kilometerconverter(kilometers) {
+  return kilometers / 1.609344;
+}
 
 
 
 
 //b. Feet to CM - should take the number of feet and convert it to the equal number of centimeters
-  
+ const Feet
+function feetConverter(feet) {
+  return feet * 30.48;
+} 
 
 
 
@@ -87,14 +156,14 @@ return dogAge;
 // 99 bottles of soda on the wall
 // create a function called annoyingSong
 // the function should take a starting number as an argument and count down - at each iteration it should log (number) bottles of soda on the wall, (number) bottles of soda, take one down pass it around (number left over) bottles of soda on the wall`
-  
+ for (int i=99; i>0; i--) 
 
 
 
 
 /************************************************************** Task 7 **************************************************************/
 //Grade Calculator
-//write a javaScript program that takes a mark out of 100 and returns a corisponding letter grade 
+//write a javaScript program that takes a mark out of 100 and returns a corresponding letter grade 
 //90s should be A 
 //80s should be B 
 //70s should be Cs 
@@ -107,7 +176,7 @@ return dogAge;
 
 /************************************************************** Stretch **************************************************************/
 //Create a function that counts the number of vowels within a string. It should handle both capitalized and uncapitalized vowels.
-// Hint - you may need to study tomorrow's traning kit on arrays 
+// Hint - you may need to study tomorrow's training kit on arrays 
 // try looking up the .includes() method
 
 
@@ -115,10 +184,5 @@ return dogAge;
 
 
 /************************************************************** Stretch **************************************************************/
-//Take Rock, Paper, Sissors further
-//update your rock papers sissors code below to take a prompt from a user using the window object
-
-
-
-
-
+//Take Rock, Paper, Scissors further
+//update your rock papers scissors code below to take a prompt from a user using the window object.
