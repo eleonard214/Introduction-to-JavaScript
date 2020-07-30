@@ -125,21 +125,24 @@ console.log (feedDog(15, 1));
     if (computer === player){
       console.log('Draw')
     }
-    else if (computer === 0 && player === 3 ){
-      
+    else if (computer === 0 && player === 2 || computer === 1 && player === 0 || computer === 2 && player === 1);{
+      console.log('You Lose')
+    }
+    else {
+      console.log('You win')
     }
   }
-  
+  console.log(rockPaperScissors)();
 
 /************************************************************** Task 5 **************************************************************/
 //Metric Converter
 //a. KM to Miles - should take the number of kilometers and convert it to the equal number of miles
 // k*converter=miles
 const kilometers
-function kilometerconverter(kilometers) {
+function kilometerConverter(kilometers) {
   return kilometers / 1.609344;
 }
-
+console.log(kilometerConverter())
 
 
 
@@ -148,7 +151,7 @@ function kilometerconverter(kilometers) {
 function feetConverter(feet) {
   return feet * 30.48;
 } 
-
+console.log(feetConverter())
 
 
 
@@ -156,7 +159,9 @@ function feetConverter(feet) {
 // 99 bottles of soda on the wall
 // create a function called annoyingSong
 // the function should take a starting number as an argument and count down - at each iteration it should log (number) bottles of soda on the wall, (number) bottles of soda, take one down pass it around (number left over) bottles of soda on the wall`
- for (int i=99; i>0; i--) 
+for (i=99; i>0; i--) {
+  console.log(i + " bottles of soda on the wall. Take one down, pass it around.")
+}
 
 
 
@@ -170,6 +175,24 @@ function feetConverter(feet) {
 //60s should be D 
 //and anything below 60 should be F
   
+function(gradeCalculator)(numGrade){
+  if (numGrade >= 90){
+    return "A";
+  }
+  else if (numGrade >= 80 && < 90) {
+    return "B";
+  }
+  else if (numGrade >= 70 && < 80) {
+    return "C";
+  }
+  else if (numGrade >= 60 && < 70){
+    return "D";
+    else if |(numGrade <60){
+      return "f";
+    }
+  }
+}
+console.log(gradeCalculator());
 
   
   
